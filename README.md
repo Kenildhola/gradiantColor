@@ -27,3 +27,59 @@ self.ViewLogin.applyGradient(colors: [UIColor(red: 91.0/255.0, green: 194.0/255.
 
     }
 }
+
+******************************** gradiantColor ********************************
+
+----------------------------- Left to Right -----------------------------------------------------
+
+// Left to Right
+
+        // ViewDidLoad
+        {
+             Your view.applyGradient(colors: [UIColor(red: 86/255, green: 26/255, blue: 147/255, alpha: 1).cgColor, UIColor(red: 155/255, green: 28/255,                blue: 230/255, alpha: 1).cgColor])
+        }
+        
+
+extension UIView
+{
+    
+    func applyGradient(colors: [CGColor]) {
+        let gradientLayer = CAGradientLayer()
+        
+        
+        gradientLayer.colors = colors
+        gradientLayer.cornerRadius = layer.cornerRadius
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 0)
+        gradientLayer.frame = bounds
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
+}
+----------------------------- Right to Left -----------------------------------------------------
+
+// Right to Left
+
+        // ViewDidLoad
+        {
+             Your view.applyGradient(colors: [UIColor(red: 86/255, green: 26/255, blue: 147/255, alpha: 1).cgColor, UIColor(red: 155/255, green: 28/255,                blue: 230/255, alpha: 1).cgColor])
+        }
+        
+
+extension UIView
+{
+    
+    func applyGradient1(colors: [CGColor]) {
+        let gradientLayer = CAGradientLayer()
+        
+        
+        gradientLayer.colors = colors
+        gradientLayer.cornerRadius = layer.cornerRadius
+        gradientLayer.startPoint = CGPoint(x: 1, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0, y: 1)
+        gradientLayer.frame = bounds
+        layer.insertSublayer(gradientLayer, at: 0)
+    }
+}
+
+
+
